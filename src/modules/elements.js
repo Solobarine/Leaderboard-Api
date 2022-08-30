@@ -4,9 +4,9 @@ const name = document.querySelector('#name');
 const score = document.querySelector('#score');
 const subBtn = document.querySelector('#submit');
 
-export {
+export { // eslint disable-line
   scoreBoard,
   name,
   score,
-  subBtn
+  subBtn,
 };
