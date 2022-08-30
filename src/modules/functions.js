@@ -1,6 +1,6 @@
 // Import Necessary Elements
 import leadArray from './array.js';
-import { name, score } from './elements.js'
+import { name, score } from './elements.js';
 import addUserScores from './fillDOM.js';
 
 // Add Score Function

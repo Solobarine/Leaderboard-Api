@@ -4,7 +4,9 @@ const name = document.querySelector('#name');
 const score = document.querySelector('#score');
 const subBtn = document.querySelector('#submit');
 
-export { scoreBoard,
-	name,
-	score,
-	subBtn };
+export {
+  scoreBoard,
+  name,
+  score,
+  subBtn
+};
