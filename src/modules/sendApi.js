@@ -10,5 +10,5 @@ async function sendApi() {
       'Content-type': 'application/json; charset=UTF-8',
     }
   }).then((sentData) => sentData.json()).then((data) => data),
-}
+
 sendApi();

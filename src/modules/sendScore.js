@@ -9,8 +9,8 @@ async function sendScores(inputName, tally) {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-  }).then((sentData) => sentData.json()).then((data) => data)
-};
+  }).then((sentData) => sentData.json()).then((data) => data);
+}
 
 // Export Function
 export default sendScores;
