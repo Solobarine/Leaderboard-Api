@@ -7,10 +7,10 @@ async function getApi() {
   const recieve = await fetch(url);
   const leadArray = await recieve.json();
   scoreBoard.innerHTML = '';
- for (let i = 0; i < leadArray.result.length; i += 1) {
+  for (let i = 0; i < leadArray.result.length; i += 1) {
     scoreBoard.innerHTML += `<li class="leader-score">${leadArray.result[i].user} : ${leadArray.result[i].score}</li>`;
   }
-};
+}
 
 // Export Function
 export default getApi;
