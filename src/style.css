@@ -1,8 +1,11 @@
 /* stylelint-disable */
+#body {
+	background-image: url('./hollowed-boxes.svg');
+}
+
 #content {
 	display: flex;
 	flex-direction: row;
-	padding: 0% 7% 7% 7%;
 }
 
 .title {
@@ -10,24 +13,31 @@
 }
 
 .show-results {
-	width: 45%;
+	width: 30%;
+	margin-left: 15%;
+	background-color: #b6cc76;
 }
 
 .add-input {
 	width: 30%;
-	margin-left: 10%;
+	padding-left: 10%;
+	background-color: #b6cc76;
 }
 
 .after {
 	display: flex;
 	flex-direction: row;
+	margin-left: 5%;
 }
 
 .refresh {
 	height: 40px;
 	width: 120px;
-	margin-left: 20%;
 	margin-top: 4%;
+	margin-left: 30%;
+	background-color: #00f;
+	border-radius: 20px;
+	color: #fff;
 }
 
 #enter-inputs {
@@ -46,16 +56,17 @@
 }
 
 #submit {
-	width: 40%;
+	width: 30%;
 	height: 40px;
-	margin-left: 60%;
+	margin-left: 70%;
 	border-radius: 15%;
+	background-color: #0f0;
 }
 
 .leader-score {
 	height: 30px;
 	padding-top: 10px;
-	padding-left: 20px;
+	margin-left: 0;
 }
 
 .leader-score:nth-child(odd) {
