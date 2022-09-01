@@ -1,5 +1,5 @@
 // Import Functions
-// import './style.css';
+ import './style.css';
 
 import submitScores, { refreshScores } from './modules/functions.js';
 
