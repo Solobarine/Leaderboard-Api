@@ -1,20 +1,13 @@
 // Import Functions
 import './style.css';
-import leadArray from './modules/array.js';
-import submitScores from './modules/functions.js';
-import { refreshPage } from './modules/fillDOM.js';
+
+import submitScores, { refreshScores } from './modules/functions.js';
 
 // Import Elements
-import { subBtn } from './modules/elements.js';
-
-const store = JSON.parse(localStorage.getItem('leaderboard'));
-if (store) {
-  leadArray.push(...store);
-} else {
-  leadArray; // eslint-disable-line
-}
-// Refresh Page
-refreshPage();
+import { refBtn, subBtn } from './modules/elements.js';
 
 // Create Eventb Listener For Submit Button
 subBtn.addEventListener('click', submitScores);
+
+// Event Listener for Refresh Button
+refBtn.addEventListener('click', refreshScores);

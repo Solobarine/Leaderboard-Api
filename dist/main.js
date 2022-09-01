@@ -116,17 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_array_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/array.js */ \"./src/modules/array.js\");\n/* harmony import */ var _modules_functions_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/functions.js */ \"./src/modules/functions.js\");\n/* harmony import */ var _modules_fillDOM_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/fillDOM.js */ \"./src/modules/fillDOM.js\");\n/* harmony import */ var _modules_elements_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/elements.js */ \"./src/modules/elements.js\");\n// Import Functions\n\n\n\n\n\n// Import Elements\n\n\nconst store = JSON.parse(localStorage.getItem('leaderboard'));\nif (store) {\n  _modules_array_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].push(...store);\n} else {\n  _modules_array_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; // eslint-disable-line\n}\n// Refresh Page\n(0,_modules_fillDOM_js__WEBPACK_IMPORTED_MODULE_3__.refreshPage)();\n\n// Create Eventb Listener For Submit Button\n_modules_elements_js__WEBPACK_IMPORTED_MODULE_4__.subBtn.addEventListener('click', _modules_functions_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n\n\n//# sourceURL=webpack://leaderboard-api/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/modules/array.js":
-/*!******************************!*\
-  !*** ./src/modules/array.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst leadArray = [];\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (leadArray);\n\n\n//# sourceURL=webpack://leaderboard-api/./src/modules/array.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_functions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/functions.js */ \"./src/modules/functions.js\");\n/* harmony import */ var _modules_elements_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/elements.js */ \"./src/modules/elements.js\");\n// Import Functions\n\n\n\n\n// Import Elements\n\n\n// Create Eventb Listener For Submit Button\n_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.subBtn.addEventListener('click', _modules_functions_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n// Event Listener for Refresh Button\n_modules_elements_js__WEBPACK_IMPORTED_MODULE_2__.refBtn.addEventListener('click', _modules_functions_js__WEBPACK_IMPORTED_MODULE_1__.refreshScores);\n\n\n//# sourceURL=webpack://leaderboard-api/./src/index.js?");
 
 /***/ }),
 
@@ -136,17 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"name\": () => (/* binding */ name),\n/* harmony export */   \"score\": () => (/* binding */ score),\n/* harmony export */   \"scoreBoard\": () => (/* binding */ scoreBoard),\n/* harmony export */   \"subBtn\": () => (/* binding */ subBtn)\n/* harmony export */ });\n// Select Required Elements\nconst scoreBoard = document.querySelector('.results');\nconst name = document.querySelector('#name');\nconst score = document.querySelector('#score');\nconst subBtn = document.querySelector('#submit');\n\n\n\n\n//# sourceURL=webpack://leaderboard-api/./src/modules/elements.js?");
-
-/***/ }),
-
-/***/ "./src/modules/fillDOM.js":
-/*!********************************!*\
-  !*** ./src/modules/fillDOM.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"refreshPage\": () => (/* binding */ refreshPage)\n/* harmony export */ });\n/* harmony import */ var _array_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./array.js */ \"./src/modules/array.js\");\n/* harmony import */ var _elements_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./elements.js */ \"./src/modules/elements.js\");\n// Import Necessary Element\n\n\n\n// Function to Add to Score\nconst addUserScores = (i) => {\n  _elements_js__WEBPACK_IMPORTED_MODULE_1__.scoreBoard.innerHTML += `<li class=\"leader-score\">${_array_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"][i].user} : ${_array_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"][i].hiScore}</li>`;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addUserScores);\n\n// Function to Refresh Page\nconst refreshPage = () => {\n  for (let i = 0; i < _array_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].length; i += 1) {\n    _elements_js__WEBPACK_IMPORTED_MODULE_1__.scoreBoard.innerHTML += `<li class=\"leader-score\">${_array_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"][i].user} : ${_array_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"][i].hiScore}</li>`;\n  }\n};\n\n\n//# sourceURL=webpack://leaderboard-api/./src/modules/fillDOM.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"name\": () => (/* binding */ name),\n/* harmony export */   \"refBtn\": () => (/* binding */ refBtn),\n/* harmony export */   \"score\": () => (/* binding */ score),\n/* harmony export */   \"scoreBoard\": () => (/* binding */ scoreBoard),\n/* harmony export */   \"subBtn\": () => (/* binding */ subBtn)\n/* harmony export */ });\n// Select Required Elements\nconst scoreBoard = document.querySelector('.results');\nconst name = document.querySelector('#name');\nconst score = document.querySelector('#score');\nconst subBtn = document.querySelector('#submit');\nconst refBtn = document.querySelector('.refresh');\n\n\n\n\n//# sourceURL=webpack://leaderboard-api/./src/modules/elements.js?");
 
 /***/ }),
 
@@ -156,7 +136,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addScore\": () => (/* binding */ addScore),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _array_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./array.js */ \"./src/modules/array.js\");\n/* harmony import */ var _elements_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./elements.js */ \"./src/modules/elements.js\");\n/* harmony import */ var _fillDOM_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fillDOM.js */ \"./src/modules/fillDOM.js\");\n// Import Necessary Elements\n\n\n\n\n// Add Score Function\nfunction addScore(x, y) {\n  const obj = { user: x, hiScore: y };\n  _array_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].push(obj);\n}\n// Function For Submit Event Button\nfunction submitScores(e) {\n  e.preventDefault();\n  const boardName = _elements_js__WEBPACK_IMPORTED_MODULE_1__.name.value;\n  const boardScore = _elements_js__WEBPACK_IMPORTED_MODULE_1__.score.value;\n  const index = _array_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].length;\n  addScore(boardName, boardScore);\n  (0,_fillDOM_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(index);\n  localStorage.setItem('leaderboard', JSON.stringify(_array_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]));\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (submitScores);\n\n\n//# sourceURL=webpack://leaderboard-api/./src/modules/functions.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"refreshScores\": () => (/* binding */ refreshScores)\n/* harmony export */ });\n/* harmony import */ var _elements_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements.js */ \"./src/modules/elements.js\");\n/* harmony import */ var _getApi_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getApi.js */ \"./src/modules/getApi.js\");\n/* harmony import */ var _sendScore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sendScore.js */ \"./src/modules/sendScore.js\");\n// Import Necessary Elements\n\n\n\n\n// Function For Submit Event Button\nfunction submitScores(e) {\n  e.preventDefault();\n  const boardName = _elements_js__WEBPACK_IMPORTED_MODULE_0__.name.value;\n  const boardScore = _elements_js__WEBPACK_IMPORTED_MODULE_0__.score.value;\n  (0,_sendScore_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(boardName, boardScore);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (submitScores);\n\n// Function to Refresh Scores\nfunction refreshScores(e) {\n  e.preventDefault();\n  (0,_getApi_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n}\n\n\n//# sourceURL=webpack://leaderboard-api/./src/modules/functions.js?");
+
+/***/ }),
+
+/***/ "./src/modules/getApi.js":
+/*!*******************************!*\
+  !*** ./src/modules/getApi.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _elements_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements.js */ \"./src/modules/elements.js\");\n// Import Elements\n\n\n// Function to Get data from API\nasync function getApi() {\n  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/6GX34ss8TE5Jp1Jkswg9/scores';\n  const recieve = await fetch(url);\n  const leadArray = await recieve.json();\n  _elements_js__WEBPACK_IMPORTED_MODULE_0__.scoreBoard.innerHTML = '';\n for (let i = 0; i < leadArray.result.length; i += 1) {\n    _elements_js__WEBPACK_IMPORTED_MODULE_0__.scoreBoard.innerHTML += `<li class=\"leader-score\">${leadArray.result[i].user} : ${leadArray.result[i].score}</li>`;\n  }\n};\n\n// Export Function\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getApi);\n\n\n//# sourceURL=webpack://leaderboard-api/./src/modules/getApi.js?");
+
+/***/ }),
+
+/***/ "./src/modules/sendScore.js":
+/*!**********************************!*\
+  !*** ./src/modules/sendScore.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nasync function sendScores(inputName, tally) {\n  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/6GX34ss8TE5Jp1Jkswg9/scores'\n  fetch(url, {\n    method: 'POST',\n    body: JSON.stringify({\n      'user': inputName,\n      'score': tally\n  }),\n     headers: {\n    'Content-type': 'application/json; charset=UTF-8',\n  }\n  }).then(sentData => sentData.json()).then(data => data)\n}\n\n// Export Function\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sendScores);\n\n\n//# sourceURL=webpack://leaderboard-api/./src/modules/sendScore.js?");
 
 /***/ })
 
