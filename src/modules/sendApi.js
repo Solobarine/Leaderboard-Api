@@ -1,4 +1,5 @@
 // Function to Send Data to API
+/* eslint-disable */
 async function sendApi() {
   const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
   fetch(url, {
@@ -9,6 +10,6 @@ async function sendApi() {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     }
-  }).then((sentData) => sentData.json()).then((data) => data),
-
+  }).then((sentData) => sentData.json()).then((data) => data)
+}
 sendApi();
